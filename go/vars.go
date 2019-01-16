@@ -9,6 +9,6 @@ func main() {
 	//var vector []string //string characters
 
 	//x := 23 //assign a value without declaring the type
-	name := "Waldo"
+	name := "Waldo" //this will be use to constants
 	fmt.Println(name)
 }
