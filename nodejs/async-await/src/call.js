@@ -1,13 +1,13 @@
 module.exports = {
     greet: function(nombreCompleto) {
-        console.log(`Hola ${nombreCompleto}! Sientes la asincronia?`);
+        console.log(`Hello ${nombreCompleto}!`);
     },
     withPromise: function(nombre, apellido) {
-        console.log("Llamando función con promesa...");
+        console.log("Calling the function with promise...");
         return new Promise((resolve, reject)=>{
-            console.log("Ejecutando espera...");
+            console.log("Executing...");
             setTimeout(()=>{
-                console.log("Resolviendo la espera!");
+                console.log("Solving!");
                 resolve(`${nombre} ${apellido}`);
             }, 5000);
         })
