@@ -26,6 +26,6 @@ module.exports = {
                 if (i === loopLimit) console.log("He llegado al final!");
             }
         });
-        console.log('El bucle ha finalizado!');
+        console.log('Ejecutando...');
     }
 }
