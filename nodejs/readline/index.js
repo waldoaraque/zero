@@ -6,29 +6,29 @@ const rl = readline.createInterface({
 });
 
 const q = [
- 'Cual es tu primer nombre? ',
- 'Cual es tu primer apellido? ',
- 'Cual es tu edad? '
+ '¿Cual es tu primer nombre? ',
+ '¿Cual es tu primer apellido? ',
+ '¿Cual es tu edad? '
 ];
 
 const AskQuestion = (rl, question) => {
- return new Promise((resolve, rej) => {
-   rl.question(question, answer => {
+  return new Promise((resolve, rej) => {
+    rl.question(question, answer => {
      resolve(answer);
-   });
- });
+    });
+  });
 }
 
 const Ask = (questions) => {
- return new Promise(async resolve => {
-   let results = [];
-   for (let i=0; i < questions.length; i++) {
+  return new Promise(async resolve => {
+    let results = [];
+    for (let i=0; i < questions.length; i++) {
      const result = await AskQuestion(rl, questions[i]);
      results = [...results, result];
-   }
-   rl.close();
-   resolve(results);
- });
+    }
+    rl.close();
+    resolve(results);
+  });
 }
 
 Ask(q)
