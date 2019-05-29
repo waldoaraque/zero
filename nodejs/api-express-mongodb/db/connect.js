@@ -8,7 +8,7 @@ module.exports = (()=>{
 
     function connect() {
         return new Promise((resolve, reject)=>{
-            MongoClient.connect(connectionUrl, { useNewUrlParser: true }, function(err, client) {
+            MongoClient.connect(connectionUrl, { useNewUrlParser: true }, (err, client) => {
                 if (err) { reject(err); }
                 console.log("Conectado satisfactoriamente al servidor de Mongo!");
                 instance = client;
