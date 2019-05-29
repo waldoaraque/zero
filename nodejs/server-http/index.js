@@ -12,5 +12,5 @@ const server = http
   	});
   });
 
-console.log(`Server working!`)
-server.listen(3000);
+console.log(`Server working...`);
+server.listen(3000); //start the server
