@@ -12,4 +12,5 @@ const server = http
   	});
   });
 
+console.log(`Server working!`)
 server.listen(3000);
