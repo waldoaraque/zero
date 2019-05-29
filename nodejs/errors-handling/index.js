@@ -1,9 +1,13 @@
 const errors = require('./src/errors');
+const handle = require('./src/handling');
 
-try {
-  errors.standardErr.range();
-} catch (e) {
-  console.log(`Error: ${e}`);
-} finally {
-  console.log(`Finally!`);
-}
+//handle.errorFirstCallbackWrong();
+
+
+  try {
+    errors.assertErr();
+  } catch (e) {
+    console.log(`Error: ${e}`);
+  } finally {
+    console.log(`Finally!`);
+  }
