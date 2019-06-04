@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = function(app) {
   glob.sync("./routes/**/*.js")
-    .forEach((file)=>{
+    .forEach((file) => {
       if (!file.includes("index.js")) {
         require(path.resolve(file))(app);
       }
