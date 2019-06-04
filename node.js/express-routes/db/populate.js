@@ -11,7 +11,7 @@ if (argv.fill) {
                 console.log("Los datos han sido insertados satisfactoriamente!");
                 mongo.disconnect();
             });
-        })
+        });
     return;
 }
 
@@ -23,6 +23,6 @@ if (argv.clear) {
                 console.log("La colección se ha descartado satisfactoriamente!");
                 mongo.disconnect();
             });
-        })
+        });
     return;
 }

@@ -4,17 +4,17 @@ const mongo = require("../db/connect");
 const { postFilm } = require("../db");
 
 module.exports = (app) => {
-    app.get(`${API_PATH}/films`, (req, res)=>{
+    app.get(`${API_PATH}/films`, (req, res) => {
         res.json(films);
     });
 
-    app.get(`${API_PATH}/films/:id`, (req, res)=>{
+    app.get(`${API_PATH}/films/:id`, (req, res) => {
         const id = req.params.id;
-        const film = films.filter(film=>film.id === id);
+        const film = films.filter(film => film.id === id);
         res.json(film);    
     });
 
-    app.post(`${API_PATH}/film`, async (req, res)=>{
+    app.post(`${API_PATH}/film`, async (req, res) => {
         const film = JSON.parse(req.body.film);
         if (film) { 
             const resp = await postFilm(film);
