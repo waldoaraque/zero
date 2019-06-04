@@ -10,9 +10,7 @@ app.use( logger("dev") );
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded({ extended: false }) );
 
-require("./routes/views")(app);
-require("./routes/api")(app);
-require("./routes/special")(app);
+require("./routes")(app);
 
 async function initMongo(){
     const db = await mongo.connect();
@@ -21,7 +19,7 @@ async function initMongo(){
 
 function initExpress() {
     console.log('Iniciando Express');
-    app.listen(3000, ()=>{
+    app.listen(3000, () => {
         console.log("Express ha iniciado correctamente!");
         process.on("SIGINT", closeApp);
         process.on("SIGTERM", closeApp);
@@ -30,7 +28,7 @@ function initExpress() {
 
 function closeApp(){
     mongo.disconnect()
-        .then(()=>process.exit(0));
+        .then(() => process.exit(0));
 }
 
 initMongo();
