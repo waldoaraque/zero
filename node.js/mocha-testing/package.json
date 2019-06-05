@@ -1,0 +1,17 @@
+{
+  "name": "mocha-testing",
+  "version": "1.0.0",
+  "description": "basic testing with mocha",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "waldoaraque",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
